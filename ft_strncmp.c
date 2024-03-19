@@ -1,5 +1,5 @@
 #include "libft.h"
-int ft_strncmp(char *str1, char* str2, int n)
+int ft_strncmp(char *str1, char* str2, size_t n)
 {
     int i;
 
