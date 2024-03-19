@@ -1,5 +1,5 @@
 #include "libft.h"
-void bzero(void *ptr, size_t num)
+void ft_bzero(void *ptr, size_t num)
 {
     unsigned char* p_ptr = ptr;
     size_t i;

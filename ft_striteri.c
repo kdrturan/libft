@@ -11,4 +11,5 @@ char* ft_strmapi(char* s, void (*f)(unsigned int , char*))
 	    f(i, &s[i]);
 		i++;
 	}
+	return (s);
 }

@@ -1,5 +1,5 @@
 #include "libft.h"
-char *strdup(const char *str)
+char *ft_strdup(const char *str)
 {
     char* p_strdup;
     size_t i;

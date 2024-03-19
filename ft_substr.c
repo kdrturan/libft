@@ -13,7 +13,7 @@ char* ft_substr(char const* s, unsigned int start, size_t len)
     i = 0;
     while (i < size)
     {
-        p_sstr[i] = s[start];
+        p_sstr[i] = s[start + i];
         i++;
     }
     p_sstr[i] = '\0';

@@ -1,5 +1,5 @@
 #include "libft.h"
-void *calloc(size_t num_elements, size_t element_size)
+void *ft_calloc(size_t num_elements, size_t element_size)
 {
     void* p_call;
     size_t size;
