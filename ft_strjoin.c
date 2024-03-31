@@ -21,7 +21,7 @@ char* ft_strjoin(char const* s1, char const* s2)
     }
     while (j < size2)
     {
-        p_sjoin[i] = s1[j];
+        p_sjoin[i] = s2[j];
         i++;
         j++;
     }

@@ -2,10 +2,11 @@
 char **ft_split(char const* s, char c)
 {
     char** psplit;
-    int peace;
-    int i;
-    int j;
-    int index;
+    size_t peace;
+    size_t i;
+    size_t j;
+    size_t index;
+
 
     index = 0;
     i = 0;
@@ -15,25 +16,25 @@ char **ft_split(char const* s, char c)
     j = i;
     while (s[i])
     {
-        if (s[i] == c)
-        {
+        while (s[i] == c)
+            i++;
+        if (s[i])
             peace++;
-            while (s[i] == c)
-                i++;
-        }
-        while (ft_isprint(s[i]) && s[i] != c)
-            i++;       
+        while (s[i] != c && s[i])
+            i++;
     }
-    psplit = (char**)malloc(peace + 2);
-    while (s[j])
+    psplit = (char**)malloc(sizeof(char *) * (peace + 1));
+    while (peace > 0)
     {
         while (s[j] == c)
             j++;
         i = j;
-        while (ft_isprint(s[j]) && s[j] != c)
+        while (s[j] != c && s[j])
             j++;
-        psplit[index++] = ft_substr(s, i, j - i);
+        if (j > i)
+            psplit[index++] = ft_substr(s, i, j - i);
+        peace--;
     }
-    psplit[index] = NULL;
+    psplit[index] = 0;
     return (psplit);
 }

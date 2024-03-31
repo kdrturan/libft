@@ -1,5 +1,5 @@
 #include "libft.h"
-void    ft_memset(void *ptr, int value, size_t num)
+void    *ft_memset(void *ptr, int value, size_t num)
 {
     unsigned char* p_ptr = ptr;
     unsigned char val = (unsigned char)value;
@@ -11,4 +11,5 @@ void    ft_memset(void *ptr, int value, size_t num)
         p_ptr[i] = val;
         i++;
     }
+    return (p_ptr);
 }

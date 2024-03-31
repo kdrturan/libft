@@ -1,5 +1,5 @@
 #include "libft.h"
-char *ft_strrchr(char *str, char ch)
+char *ft_strrchr(char *str, int ch)
 {
     int i;
 
@@ -12,7 +12,7 @@ char *ft_strrchr(char *str, char ch)
     }
     while (i >= 0)
     {
-        if (*str == ch)
+        if (*str == (char)ch)
             return str;
         str--;
         i--;
